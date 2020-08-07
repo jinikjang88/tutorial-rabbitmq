@@ -1,5 +1,6 @@
 package com.tutorial.rabbitmq.demo.service;
 
+import com.tutorial.rabbitmq.demo.message.CustomMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,11 @@ public class Runner implements CommandLineRunner {
   public void run(String... args) throws Exception {
     System.out.println("Sending message....");
 
-    rabbitTemplate.convertAndSend(topicExchange, "foo.bar.baz", "Hello Message!!");
+//    rabbitTemplate.convertAndSend(topicExchange, "foo.bar.baz", "Hello Message!!");
+
+//    CustomMessage message = CustomMessage.builder().ptName("1").pickNo("2").callNo("3").build();
+//
+//    rabbitTemplate.convertAndSend(topicExchange, "foo.bar.baz", message);
 
   }
 }

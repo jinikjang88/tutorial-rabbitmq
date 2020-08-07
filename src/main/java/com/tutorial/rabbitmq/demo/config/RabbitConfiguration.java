@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfiguration {
 
-  private static final String queueName = "spring-boot";
+  private static final String queueName = "DID_SEND_0";
 
   private static final String topicExchangeName = "spring-boot-exchange";
 
